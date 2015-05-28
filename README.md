@@ -28,7 +28,7 @@ It uses the content attribute to identify the breakpoint.
 
 ```css
 html:after {
-	clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
   height: 0;
   left: -9999px;
   overflow: hidden;
