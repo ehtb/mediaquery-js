@@ -1,7 +1,7 @@
 {
   "name": "mediaquery-js",
-  "version": "0.2.0",
-  "description": "ES6 Mediaquery utility",
+  "version": "0.2.1",
+  "description": "ES6 CSS3 mediaquery to JavaScript bridge",
   "main": "./dist/index.js",
   "scripts": {},
   "repository": {
