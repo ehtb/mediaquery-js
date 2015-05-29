@@ -44,6 +44,8 @@ export default class MQ extends eventEmitter {
     let style = this.getComputedStyle();
 
     return style && style.getPropertyValue('content') ?
-      style.getPropertyValue('content').replace(/("|')/g, '') : undefined;
+      style.getPropertyValue('content')
+      .replace(/("|')/g, '')
+      .replace(/("|')/g, '') : undefined;
   };
 }
