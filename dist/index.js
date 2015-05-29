@@ -66,7 +66,7 @@ var MQ = (function (_eventEmitter) {
     get: function () {
       var style = this.getComputedStyle();
 
-      return style && style.getPropertyValue('content') ? style.getPropertyValue('content').replace(/\"/g, '') : undefined;
+      return style && style.getPropertyValue('content') ? style.getPropertyValue('content').replace(/("|')/g, '').replace(/("|')/g, '') : undefined;
     }
   }]);
 
