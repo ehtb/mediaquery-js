@@ -1,8 +1,8 @@
 {
   "name": "mediaquery-js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "ES6 Mediaquery utility",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "raf": "^2.0.4",
-    "throttled-resize": "^0.1.0",
+    "throttled-resize": "^0.1.2",
     "wolfy87-eventemitter": "^4.2.11"
   },
   "testling": {
