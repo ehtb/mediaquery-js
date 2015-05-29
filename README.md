@@ -1,6 +1,6 @@
-# resize
+# Mediaquery -js
 
-ES6 throttled browser resize event dispatcher based on requestAnimationFrame.
+ES6 CSS3 mediaquery to JavaScript bridge using the ```content``` psuedo element
 
 ## JS
 
