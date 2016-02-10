@@ -1,6 +1,6 @@
 {
   "name": "mediaquery-js",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "ES6 CSS3 mediaquery to JavaScript bridge",
   "main": "./dist/index.js",
   "scripts": {},
@@ -23,9 +23,7 @@
     "testling": "~1.6.1"
   },
   "dependencies": {
-    "raf": "^2.0.4",
-    "throttled-resize": "^0.1.2",
-    "wolfy87-eventemitter": "^4.2.11"
+    "throttled-resize": "^0.3.0"
   },
   "testling": {
     "files": "test.js",
