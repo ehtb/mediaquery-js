@@ -1,22 +1,20 @@
 'use strict';
 
-import eventEmitter from 'wolfy87-eventemitter';
 import Resize from 'throttled-resize';
 
-export default class MQ extends eventEmitter {
+export default class MQ extends Resize {
   currentBreakpoint: String;
   computationElement: HTMLElement;
   resize: Resize;
+  onResizeHandle: object;
 
   constructor(computationElement) {
     super();
 
     this.computationElement = computationElement || document.documentElement;
-
     this.currentBreakpoint = this.breakpoint;
 
-    this.resize = new Resize();
-    this.resize.on('resize:end', this.onResize.bind(this));
+    this.on('resize:end', this.onResize.bind(this));
   };
 
   onResize() {
