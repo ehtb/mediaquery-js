@@ -3,11 +3,6 @@
 import Resize from 'throttled-resize';
 
 export default class MQ extends Resize {
-  currentBreakpoint: String;
-  computationElement: HTMLElement;
-  resize: Resize;
-  onResizeHandle: object;
-
   constructor(computationElement) {
     super();
 
