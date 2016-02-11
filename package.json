@@ -1,10 +1,11 @@
 {
   "name": "mediaquery-js",
-  "version": "0.3.1",
+  "version": "1.0.1",
   "description": "ES6 CSS3 mediaquery to JavaScript bridge",
-  "main": "./dist/index.js",
+  "main": "index.js",
   "scripts": {
-    "build": "browserify index.js -o dist/index.js -t [ babelify --presets [ es2015 ] ]"
+    "build": "babel index.js -o dist/index.js --presets es2015",
+    "test": "browserify -t [ babelify --presets [ es2015 ] ] test.js | testling"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,11 @@
     "babelify": "^7.2.0",
     "browserify": "13.0.0",
     "eslint": "^0.20.0",
-    "tape": "~2.12.3",
+    "tape": "^4.0.0",
     "testling": "~1.6.1"
   },
   "dependencies": {
-    "throttled-resize": "^0.3.1"
+    "throttled-resize": "^1.0.1"
   },
   "testling": {
     "files": "test.js",
