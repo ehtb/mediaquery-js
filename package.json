@@ -1,8 +1,8 @@
 {
   "name": "mediaquery-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ES6 CSS3 mediaquery to JavaScript bridge",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel index.js -o dist/index.js --presets es2015",
     "test": "browserify -t [ babelify --presets [ es2015 ] ] test.js | testling"
