@@ -10,10 +10,10 @@ export default class MQ extends Resize {
     this.currentBreakpoint = this.breakpoint;
 
     this.on('resize:end', this.onResize.bind(this));
-  };
+  }
 
   onResize() {
-    let breakpoint = this.breakpoint;
+    const breakpoint = this.breakpoint;
 
     if (breakpoint !== this.currentBreakpoint) {
       this.currentBreakpoint = breakpoint;
@@ -22,23 +22,25 @@ export default class MQ extends Resize {
         breakpoint
       }]);
     }
-  };
+  }
 
   hasMq() {
     return (typeof window.matchMedia !== 'undefined' ||
       typeof window.msMatchMedia !== 'undefined');
-  };
+  }
 
   getComputedStyle() {
     return window.getComputedStyle(this.computationElement, ':after');
-  };
+  }
 
   get breakpoint() {
-    let style = this.getComputedStyle();
+    const style = this.getComputedStyle();
 
-    return style && style.getPropertyValue('content') ?
-      style.getPropertyValue('content')
-      .replace(/("|')/g, '')
-      .replace(/("|')/g, '') : undefined;
-  };
+    // Double quote replace to fix an issue on IE9-
+    return style && style.getPropertyValue('content')
+      ? style.getPropertyValue('content')
+          .replace(/("|')/g, '')
+          .replace(/("|')/g, '')
+      : undefined;
+  }
 }
